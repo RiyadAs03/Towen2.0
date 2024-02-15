@@ -1,0 +1,275 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: transparent;
+}
+
+
+body {
+  background-image: url("https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+p {
+  color: #000000;
+}
+h2 {
+  color: rgb(0, 0, 0);
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+}
+
+/* Style the header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Style the sections */
+.container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  color: #e9f5ff;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the speakers section */
+.speaker {
+  text-align: center;
+  margin: 20px;
+}
+
+.speaker img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* Style the schedule section */
+.schedule-item {
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Add responsive design styles as needed */
+
+@media (max-width: 768px) {
+  /* Add styles for smaller screens */
+}
+
+@media (max-width: 480px) {
+  /* Add styles for mobile screens */
+}
+
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+}
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@font-face {
+  font-family: "bw";
+  src: url("https://robindelaporte.fr/codepen/play/BwModelicaSS01-ExtraBold.woff")
+    format("woff");
+}
+html {
+  font-size: 100%;
+}
+
+.home {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  top: 0%;
+  left: 0%;
+  background-color: #e9f5ff;
+}
+.home canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+}
+.home span {
+  position: relative;
+  z-index: 6;
+  font-family: "bw";
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 3rem;
+  color: #fff;
+  pointer-events: none;
+}
+.home a {
+  font-family: "bw";
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  font-size: 3rem;
+  color: #fff;
+  background-color: #acc7ed;
+  border-radius: 10rem;
+  padding: 1.5rem 4rem 2rem;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+.home a span {
+  position: relative;
+  opacity: 0;
+}
+.home a:after {
+  content: "";
+  background: linear-gradient(56deg, #61dafb 0%, #d6cbf6 46%, #f2056f 100%);
+  width: 80%;
+  height: 20%;
+  position: absolute;
+  bottom: -4px;
+  left: 10%;
+  opacity: 0;
+  filter: blur(15px);
+  border-radius: 10rem;
+  transform: translateZ(-1px);
+  transition: opacity 0.6s ease;
+}
+.home a:before {
+  content: "";
+  background: linear-gradient(56deg, #61dafb 0%, #d6cbf6 46%, #f2056f 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 10rem;
+  transition: opacity 0.4s ease;
+}
+.home a:hover {
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%) scale(1.35);
+  transform-origin: center;
+}
+.home a:hover:after {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.home a:hover:before {
+  opacity: 1;
+  transition: opacity 0.6s linear;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #13344542;
+}
+p {
+  color: white;
+}
+
+.main {
+  background-color: #61dafb;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: #e9f5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.inner {
+  color: #000000;
+}
